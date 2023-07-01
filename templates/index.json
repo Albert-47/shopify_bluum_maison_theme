@@ -314,6 +314,66 @@
         "padding_top": 32,
         "padding_bottom": 64
       }
+    },
+    "ffd97c60-9a55-479a-9570-3f1205b56ab5": {
+      "type": "section-custom-content",
+      "blocks": {
+        "template--19761450549549__ffd97c60-9a55-479a-9570-3f1205b56ab5-1688224483c8b8a9fd-1": {
+          "type": "text",
+          "settings": {
+            "subheading": "Introducing",
+            "subheading_size": 3,
+            "title": "Custom content",
+            "heading_size": 7,
+            "text": "<p>Use this section to create unique side-by-side layouts with various content blocks. Pair text with images, newsletter blocks, products, videos, testimonials and more.<\/p>",
+            "text_size": 3,
+            "button_text": "Learn more",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "show_social_links": false,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "bg_color": "",
+            "color": ""
+          }
+        },
+        "28f8fcf5-8708-44e2-86c7-b1f67e1388a8": {
+          "type": "dual-image",
+          "settings": {
+            "overlay_opacity": 0,
+            "overlay_color": "#000",
+            "show_overlay_text": false,
+            "title": "",
+            "heading_size": 7,
+            "description": "",
+            "text_size": 3,
+            "flex_align": "align--middle-center",
+            "bg_color": "",
+            "color": "#FFFFFF",
+            "link_text": "",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19761450549549__ffd97c60-9a55-479a-9570-3f1205b56ab5-1688224483c8b8a9fd-1",
+        "28f8fcf5-8708-44e2-86c7-b1f67e1388a8"
+      ],
+      "settings": {
+        "height": "screen-height-one-half",
+        "mobile_height": "screen-height-one-half--mobile",
+        "width": "wrapper--full-padded",
+        "borders": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -323,6 +383,7 @@
     "hero",
     "logos",
     "dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad",
-    "91139f65-9713-4532-94de-fbf193308ffd"
+    "91139f65-9713-4532-94de-fbf193308ffd",
+    "ffd97c60-9a55-479a-9570-3f1205b56ab5"
   ]
 }
