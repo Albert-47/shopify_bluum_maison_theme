@@ -252,26 +252,48 @@
         "padding_bottom": 50
       }
     },
-    "dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad": {
-      "type": "text-promo",
+    "ffd97c60-9a55-479a-9570-3f1205b56ab5": {
+      "type": "section-custom-content",
       "blocks": {
-        "template--18651456733491__dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad-168098262998b27fb3-0": {
-          "type": "heading",
+        "d1da8554-c4e1-4fa3-8a22-8c2a4939ece5": {
+          "type": "image",
           "settings": {
-            "title": "Text promo"
+            "image": "shopify:\/\/shop_images\/dew-gif.jpg",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "show_overlay_text": false,
+            "title": "",
+            "heading_size": 7,
+            "description": "",
+            "text_size": 3,
+            "flex_align": "align--middle-center",
+            "bg_color": "",
+            "color": "#ffffff",
+            "link_text": "",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
           }
         },
-        "template--18651456733491__dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad-168098262998b27fb3-1": {
-          "type": "text",
+        "28f8fcf5-8708-44e2-86c7-b1f67e1388a8": {
+          "type": "dual-image",
           "settings": {
-            "content": "Advertise a promotion or a sale"
-          }
-        },
-        "template--18651456733491__dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad-168098262998b27fb3-2": {
-          "type": "button",
-          "settings": {
-            "button_text": "Shop now",
-            "button_url": "",
+            "image__1": "shopify:\/\/shop_images\/Group_761_2.jpg",
+            "image__2": "shopify:\/\/shop_images\/Frame_534.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "show_overlay_text": false,
+            "title": "",
+            "heading_size": 7,
+            "description": "",
+            "text_size": 3,
+            "flex_align": "align--middle-center",
+            "bg_color": "",
+            "color": "#ffffff",
+            "link_text": "",
+            "link": "",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--solid",
@@ -280,69 +302,48 @@
         }
       },
       "block_order": [
-        "template--18651456733491__dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad-168098262998b27fb3-0",
-        "template--18651456733491__dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad-168098262998b27fb3-1",
-        "template--18651456733491__dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad-168098262998b27fb3-2"
+        "d1da8554-c4e1-4fa3-8a22-8c2a4939ece5",
+        "28f8fcf5-8708-44e2-86c7-b1f67e1388a8"
       ],
       "settings": {
-        "width": "wrapper--full-padded",
-        "border": true,
-        "bg_color": "",
-        "color": "",
-        "overlay_opacity": 0,
-        "overlay_color": "#000000",
-        "show_overlay_text": false,
-        "padding_top": 50,
-        "padding_bottom": 50
+        "height": "screen-height-one-third",
+        "mobile_height": "screen-height-one-half--mobile",
+        "width": "wrapper--full",
+        "borders": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "91139f65-9713-4532-94de-fbf193308ffd": {
-      "type": "section-blog",
-      "settings": {
-        "blog_name": "news",
-        "title": "Blog posts",
-        "grid": 3,
-        "rows": 1,
-        "aspect_ratio": 0.8,
-        "show_tags": true,
-        "show_author": false,
-        "show_date": false,
-        "show_button": true,
-        "show_comments": false,
-        "bg_color": "",
-        "color": "",
-        "padding_top": 32,
-        "padding_bottom": 64
-      }
-    },
-    "ffd97c60-9a55-479a-9570-3f1205b56ab5": {
+    "d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0": {
       "type": "section-custom-content",
       "blocks": {
-        "template--19761450549549__ffd97c60-9a55-479a-9570-3f1205b56ab5-1688224483c8b8a9fd-1": {
-          "type": "text",
+        "template--19761450549549__d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0-168824037886e5a2f8-0": {
+          "type": "image",
           "settings": {
-            "subheading": "Introducing",
-            "subheading_size": 3,
-            "title": "Custom content",
-            "heading_size": 7,
-            "text": "<p>Use this section to create unique side-by-side layouts with various content blocks. Pair text with images, newsletter blocks, products, videos, testimonials and more.<\/p>",
+            "image": "shopify:\/\/shop_images\/Frame_525_cleanup.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000",
+            "show_overlay_text": false,
+            "title": "Our Newsletter is a Conversation Starter.",
+            "heading_size": 9,
+            "description": "Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.",
             "text_size": 3,
-            "button_text": "Learn more",
-            "button_url": "",
+            "flex_align": "align--middle-center",
+            "bg_color": "",
+            "color": "#000000",
+            "link_text": "BUTTON TEXT",
+            "link": "",
             "button_type": "btn--primary",
             "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "show_social_links": false,
-            "text_columns": 1,
-            "align_text": "text-left",
-            "bg_color": "",
-            "color": ""
+            "button_style": "btn--text",
+            "show_arrow": false
           }
         },
-        "28f8fcf5-8708-44e2-86c7-b1f67e1388a8": {
+        "d942b261-9e74-488c-988f-35a2302ee61b": {
           "type": "dual-image",
           "settings": {
+            "image__1": "shopify:\/\/shop_images\/Group_761_2.jpg",
+            "image__2": "shopify:\/\/shop_images\/Frame_534.png",
             "overlay_opacity": 0,
             "overlay_color": "#000",
             "show_overlay_text": false,
@@ -363,13 +364,13 @@
         }
       },
       "block_order": [
-        "template--19761450549549__ffd97c60-9a55-479a-9570-3f1205b56ab5-1688224483c8b8a9fd-1",
-        "28f8fcf5-8708-44e2-86c7-b1f67e1388a8"
+        "template--19761450549549__d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0-168824037886e5a2f8-0",
+        "d942b261-9e74-488c-988f-35a2302ee61b"
       ],
       "settings": {
-        "height": "screen-height-one-half",
+        "height": "screen-height-one-third",
         "mobile_height": "screen-height-one-half--mobile",
-        "width": "wrapper--full-padded",
+        "width": "wrapper--full",
         "borders": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -382,8 +383,7 @@
     "image-with-text",
     "hero",
     "logos",
-    "dc7fb1a8-1ce7-4a06-90d3-f01ee4a5f6ad",
-    "91139f65-9713-4532-94de-fbf193308ffd",
-    "ffd97c60-9a55-479a-9570-3f1205b56ab5"
+    "ffd97c60-9a55-479a-9570-3f1205b56ab5",
+    "d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0"
   ]
 }

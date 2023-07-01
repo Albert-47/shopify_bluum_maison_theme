@@ -1,3 +1,21 @@
+{% liquid
+
+    capture wrapper_classes
+
+        if desktop_height != blank
+        echo ' ' | append: desktop_height
+        endif
+
+        if mobile_height != blank
+        echo ' ' | append: mobile_height
+        endif
+
+        if modifier != blank
+        echo ' ' | append: modifier
+        endif
+    endcapture
+    
+%}
 
 {%- capture aos_animation -%}
     {%- if animation_delay -%}
@@ -8,18 +26,13 @@
     {%- endif -%}
   {%- endcapture -%}
 
-<div class="dual-image-wrapper ">
-  <div {{ aos_animation }}>
-    <div class="is-loading">
-
-      {%- if image contains 'blank.svg' or image == blank -%}
-        <img src="{{ 'blank.svg' | asset_url }}" loading="lazy" class="is-loading">
-      {%- else -%}
-        {{ image | image_url: width: width | image_tag:
-          loading: 'lazy',
-          class: 'is-loading dual-image-perse'
-        }}
-      {%- endif -%}
-    </div>
-  </div>
+<div class=" {{ wrapper_classes }} dual-image-wrapper is-loading {{ special_class }}" {{ aos_animation }}>
+    {%- if image contains 'blank.svg' or image == blank -%}
+    <img src="{{ 'blank.svg' | asset_url }}" loading="lazy" class="is-loading dual-image-perse">
+    {%- else -%}
+    {{ image | image_url: width: width | image_tag:
+        loading: 'lazy',
+        class: 'is-loading dual-image-perse'
+    }}
+    {%- endif -%}
 </div>

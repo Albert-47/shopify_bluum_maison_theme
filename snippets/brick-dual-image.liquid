@@ -97,7 +97,7 @@
       </div>
     {%- endif -%}
 
-    <div class="frame__item">
+    <div class="frame__item  dual-images-container">
       {%- if block.settings.link != blank and link_text == blank -%}
         <a href="{{ block.settings.link }}" class="hero__content__link" aria-label="{{ block.settings.image__1.alt | default: title | default: description | strip_html | escape }}">&nbsp;</a>
       {%- endif -%}
@@ -117,8 +117,36 @@
           endif
         endcapture
 
-        render 'dual-image-item', image: block.settings.image__1, desktop_height: section.settings.height, mobile_height: section.settings.mobile_height, sizes: image_sizes
+        
+
+        render 'dual-image-item', image: block.settings.image__1, desktop_height: section.settings.height, mobile_height: section.settings.mobile_height, sizes: image_sizes, special_class: 'dual-image-top'
+        render 'dual-image-item', image: block.settings.image__2, desktop_height: section.settings.height, mobile_height: section.settings.mobile_height, sizes: image_sizes, special_class: 'dual-image-bottom'
       -%}
     </div>
   </div>
 </div>
+
+{% style %}
+  .dual-images-container {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
+  .dual-image-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .dual-image-top {
+    padding-top: 5rem;
+  }
+
+  .dual-image-bottom {
+    padding-bottom: 5rem;
+  }
+
+  .dual-image-perse {
+    max-width: 91%;
+  }
+{% endstyle %}

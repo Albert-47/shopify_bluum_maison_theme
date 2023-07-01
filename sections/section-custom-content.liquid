@@ -24,6 +24,15 @@
   endunless
 
   assign animation_anchor = '#BrickSection--' | append: section.id
+
+
+  assign dual_section = false
+
+  for block in section.blocks
+    if block.type == 'dual-images'
+      assign dual_section = true
+    endif
+  endfor
 -%}
 
 {%- style -%}
@@ -37,7 +46,7 @@
   data-section-id="{{ section.id }}"
   data-section-type="custom-content"
   {% if transparent_header %}data-overlay-header{% endif %}
-  class="section-padding">
+class="section-padding {% if dual_section %} dual-section {% endif %}">
   {%- if section.blocks.size > 0 -%}
     <div class="brick__section brick--{{ section.blocks.size }} {{ border_class }} {{ width }} frame">
       {%- for block in section.blocks -%}
@@ -423,12 +432,17 @@
     },
     {
       "type": "dual-image",
-      "name": "Dual Image",
+      "name": "Dual Image Container",
       "settings": [
         {
           "type": "image_picker",
           "id": "image__1",
-          "label": "Image"
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image__2",
+          "label": "Image 2"
         },
         {
           "type": "header",
