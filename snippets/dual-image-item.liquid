@@ -1,0 +1,25 @@
+
+{%- capture aos_animation -%}
+    {%- if animation_delay -%}
+      data-aos="img-in"
+      data-aos-delay="{{ animation_delay | times: 150 }}"
+      data-aos-duration="800"
+      data-aos-easing="ease-out-quart"
+    {%- endif -%}
+  {%- endcapture -%}
+
+<div class="dual-image-wrapper ">
+  <div {{ aos_animation }}>
+    <div class="is-loading">
+
+      {%- if image contains 'blank.svg' or image == blank -%}
+        <img src="{{ 'blank.svg' | asset_url }}" loading="lazy" class="is-loading">
+      {%- else -%}
+        {{ image | image_url: width: width | image_tag:
+          loading: 'lazy',
+          class: 'is-loading dual-image-perse'
+        }}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
