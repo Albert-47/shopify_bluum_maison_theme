@@ -375,6 +375,12 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "triple-image": {
+      "type": "section-triple-image",
+      "settings": {
+        
+      }
     }
   },
   "order": [
@@ -384,6 +390,7 @@
     "hero",
     "logos",
     "ffd97c60-9a55-479a-9570-3f1205b56ab5",
+    "triple-image",
     "d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0"
   ]
 }
