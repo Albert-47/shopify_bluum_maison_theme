@@ -1,0 +1,11 @@
+{
+    "[liquid]": {
+        "editor.defaultFormatter": null,
+        "editor.formatOnSave": false
+    },
+    "editor.defaultFormatter": null,
+    "liquid.format.enable": false,
+    "[liquid-css]": {
+        "editor.formatOnSave": false
+    }
+}
