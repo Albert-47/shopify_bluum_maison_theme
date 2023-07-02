@@ -1,5 +1,77 @@
-<section>
-    <h3>Triple image section</h3>
+
+{%- liquid
+  assign bg_color = section.settings.bg_color
+  assign images_number = 0
+  if section.settings.image_1 != blank
+    assign images_number = images_number | plus: 1
+  endif
+  if section.settings.image_2 != blank
+    assign images_number = images_number | plus: 1
+  endif
+  if section.settings.image_3 != blank
+    assign images_number = images_number | plus: 1
+  endif
+-%}
+
+{%- style -%}
+  #TIMG--{{ section.id }} {
+
+    {%- unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank -%}
+      background-color: {{ bg_color }};
+    {%- endunless -%}
+  }
+
+  .triple-image-wrapper {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-gap: 0rem;
+    grid-template-columns: repeat(3, calc(85% / {{ images_number }}));
+  }
+
+  .triple-image--left {
+    padding-top: 2rem;
+    align-self: end;
+    margin-bottom: -4px;
+  }
+
+  .triple-image--center {
+    align-self: center;
+    height: 100%;
+    margin-bottom: -2px;
+  }
+
+  .triple-image--right {
+    padding-bottom: 2rem;
+    align-self: start;
+  }
+
+
+  .triple-perse-center {
+    max-height: 58.2rem;
+  }
+{%- endstyle -%}
+
+<section id="TIMG--{{ section.id }}">
+    <div class="triple-image-wrapper">
+        {% if section.settings.image_1 != blank %}
+            <div class="triple-image triple-image--left">
+                <img src="{{ section.settings.image_1 | img_url: '447x900' }}" alt="Image" loading="lazy">
+            </div>
+        {% endif %}
+        {% if section.settings.image_3 != blank %}
+            <div class="triple-image triple-image--center">
+                <img src="{{ section.settings.image_3 | img_url: '497x1000' }}" class="triple-perse-center" alt="Image" loading="lazy">
+            </div>
+        {% endif %}
+        {% if section.settings.image_2 != blank %}
+            <div class="triple-image triple-image--right">
+                <img src="{{ section.settings.image_2 | img_url: '447x900' }}" alt="Image" loading="lazy">
+            </div>
+        {% endif %}
+    </div>
 </section>
 
 {% schema %}
@@ -7,19 +79,32 @@
       "name": "Triple image",
       "settings": [
           {
+            "type": "header",
+            "content": "Images"
+          },
+          {
             "type": "image_picker",
             "id": "image_1",
-            "label": "Image 1"
+            "label": "Left Image"
           },
           {
             "type": "image_picker",
             "id": "image_2",
-            "label": "Image 2"
+            "label": "Right Image"
           },
           {
             "type": "image_picker",
             "id": "image_3",
-            "label": "Image 3"
+            "label": "Center Image"
+          },
+          {
+            "type": "header",
+            "content": "Colors"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background"
           }
       ],
       "presets": [

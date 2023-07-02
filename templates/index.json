@@ -314,6 +314,15 @@
         "padding_bottom": 0
       }
     },
+    "triple-image": {
+      "type": "section-triple-image",
+      "settings": {
+        "image_1": "shopify:\/\/shop_images\/image_2023-07-01_172158915.png",
+        "image_2": "shopify:\/\/shop_images\/Frame_462_1.png",
+        "image_3": "shopify:\/\/shop_images\/Frame_503_2.png",
+        "bg_color": "#262c36"
+      }
+    },
     "d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0": {
       "type": "section-custom-content",
       "blocks": {
@@ -322,7 +331,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Frame_525_cleanup.png",
             "overlay_opacity": 0,
-            "overlay_color": "#000",
+            "overlay_color": "#000000",
             "show_overlay_text": false,
             "title": "Our Newsletter is a Conversation Starter.",
             "heading_size": 9,
@@ -345,7 +354,7 @@
             "image__1": "shopify:\/\/shop_images\/Group_761_2.jpg",
             "image__2": "shopify:\/\/shop_images\/Frame_534.png",
             "overlay_opacity": 0,
-            "overlay_color": "#000",
+            "overlay_color": "#000000",
             "show_overlay_text": false,
             "title": "",
             "heading_size": 7,
@@ -353,7 +362,7 @@
             "text_size": 3,
             "flex_align": "align--middle-center",
             "bg_color": "",
-            "color": "#FFFFFF",
+            "color": "#ffffff",
             "link_text": "",
             "link": "",
             "button_type": "btn--primary",
@@ -374,12 +383,6 @@
         "borders": false,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "triple-image": {
-      "type": "section-triple-image",
-      "settings": {
-        
       }
     }
   },
