@@ -90,7 +90,29 @@
     },
     "multi-paragraph": {
       "type": "section-multiparagraph",
+      "blocks": {
+        "f50ae29f-5697-4cff-8d94-c2d7a5d2d946": {
+          "type": "bigger_paragraph",
+          "settings": {
+            "heading": "This is a heading 1",
+            "paragraph": "<p>This is a six words paragraph<\/p>"
+          }
+        },
+        "026235d2-6a15-4ef1-afdb-472625c76b88": {
+          "type": "smaller_paragraph",
+          "settings": {
+            "heading": "This is a heading",
+            "paragraph": "<p>This is a six words paragraph<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f50ae29f-5697-4cff-8d94-c2d7a5d2d946",
+        "026235d2-6a15-4ef1-afdb-472625c76b88"
+      ],
       "settings": {
+        "title": "This is a heading",
+        "text_color": "#000000",
         "background_color": "#ffffff"
       }
     },

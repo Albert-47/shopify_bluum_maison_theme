@@ -1,6 +1,9 @@
 {%- liquid
   assign bg_color = section.settings.background_color
   assign text_color = section.settings.text_color
+
+  assign big_pg_count = 0
+  assign small_pg_count = 0
  
 -%}
 
@@ -20,11 +23,48 @@
 
 <section id="MP--{{ section.id }}">
     <h2>{{ section.settings.title  }}</h2>
+
+    {% if section.blocks.size > 0 %}
+        <div class="mparagraphs-wrapper">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'bigger_paragraph' %}
+                        {% assign big_pg_count = big_pg_count | plus: 1 %}
+
+                    {% when 'smaller_paragraph' %}
+                        {% assign small_pg_count = small_pg_count | plus: 1 %}
+                        
+                {% endcase %}
+            {% endfor %}
+            {% if small_pg_count > 1 or big_pg_count > 1 %}
+                <p style="margin: 0; text-align: center;">No more than 1 block of the same type is allowed</p>
+
+            {% else %}
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'bigger_paragraph' %}
+                            <div class="bigger-paragraph-wrapper">
+                            <h4>{{ block.settings.heading }}</h4>  
+                                {{ block.settings.paragraph }}
+                            </div>
+
+                        {% when 'smaller_paragraph' %}
+                            <div class="smaller-paragraph-wrapper">
+                            <h4>{{ block.settings.heading }}</h4>  
+                                {{ block.settings.paragraph }}
+                            </div>
+                    {% endcase %}
+                {% endfor %}
+            {% endif %}
+
+        </div>
+    {% endif %}
 </section>
 
 {% schema %}
     {
       "name": "Multi Paragraph Section",
+      "max_blocks": 2,
       "settings": [
             {
                 "type": "text",
