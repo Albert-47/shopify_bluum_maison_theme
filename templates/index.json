@@ -88,6 +88,12 @@
         "padding_bottom": 100
       }
     },
+    "multi-paragraph": {
+      "type": "section-multiparagraph",
+      "settings": {
+        "background_color": "#ffffff"
+      }
+    },
     "screen-image": {
       "type": "section-screen-image",
       "settings": {
@@ -244,6 +250,7 @@
   "order": [
     "slideshow",
     "docs",
+    "multi-paragraph",
     "screen-image",
     "complex-triple-image",
     "ffd97c60-9a55-479a-9570-3f1205b56ab5",
