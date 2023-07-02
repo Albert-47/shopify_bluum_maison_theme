@@ -32,7 +32,12 @@
   endif
 -%}
 
-
+{% style %}
+  .hero__content {
+    width: 100%;
+    max-width: 100% !important;
+  }
+{% endstyle %}
 
 <div class="index-hero slideshow {{ desktop_height }} {{ mobile_height }}" data-section-id="{{ section.id }}" data-section-type="slideshow" data-overlay-header style="overflow: visible">
   <div class="{{ section.settings.width }}">
@@ -99,7 +104,6 @@
             assign margin_bottom = block.settings.margin_bottom
           -%}
 
-        
 
           <div class="slideshow__slide slideshow__slide--{{ block.id }} frame wide-image {{ section.settings.height }} {{ section.settings.mobile_height }} {{ text_color_class }}{% if forloop.first %} is-selected{% endif %}" style="overflow: visible;"
             {{ color_settings }}
@@ -122,7 +126,19 @@
                 <div class="hero__content{% if hero_transparent %} hero__content--transparent{% if show_overlay_text %} backdrop--radial{% endif %}{% endif %}"{% if show_header_backdrop %} style="--bg: {{ overlay_color }}; --overlay-opacity: {{ overlay_opacity }};" {% endif %}>
                   {%- unless block.settings.title == '' -%}
                     {%- assign font_size_class = block.settings.heading_size | prepend: 'heading-size-' -%}
-                    <h2 class="hero__title {{ font_size_class }}"
+                    {% style %}
+                       #hero__title--{{ block.id }} {
+                          font-size: {{ block.settings.heading_size }}em;
+                        }
+          
+                        @media only screen and (max-width: 500px) {
+                        
+                        #hero__title--{{ block.id }} {
+                          font-size: {{ block.settings.heading_size | minus: 3 }}em;
+                        }
+                      }
+                    {% endstyle %}
+                    <h2 class="hero__title" id="hero__title--{{ block.id }}"
                       data-aos="hero"
                       data-aos-anchor="{{ animation_anchor }}"
                       data-aos-order="{{ animation_order }}">
