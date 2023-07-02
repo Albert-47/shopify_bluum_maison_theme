@@ -42,22 +42,26 @@
     max-height: 40rem;
   }
 
+  .complex-image {
+    max-width: 37%
+  }
+
 {%- endstyle -%}
 
 <section id="CIMG--{{ section.id }}" style="position: relative;">
     <div class="complex-image-wrapper">
         {% if section.settings.image_1 != blank %}
-            <img src="{{ section.settings.image_1 | img_url: '1024x1024' }}" class="complex-image--left" alt="Image" loading="lazy">
+            <img src="{{ section.settings.image_1 | img_url: '1024x1024' }}" class="complex-image--left complex-image" alt="Image" loading="lazy">
         {% endif %}
         
         {% if section.settings.image_2 != blank %}
-            <img src="{{ section.settings.image_2 | img_url: '1024x1024' }}" class="complex-image--right" alt="Image" loading="lazy">
+            <img src="{{ section.settings.image_2 | img_url: '1024x1024' }}" class="complex-image--right complex-image" alt="Image" loading="lazy">
         {% endif %}
     </div>
 
     <div class="most-complex-wrapper">
         {% if section.settings.image_3 != blank %}
-            <img src="{{ section.settings.image_3 | img_url: '1024x1024' }}" class="complex-perse-center" alt="Image" loading="lazy">
+            <img src="{{ section.settings.image_3 | img_url: '1024x1024' }}" class="complex-perse-center complex-image" alt="Image" loading="lazy">
         {% endif %}
     </div>
 </section>
