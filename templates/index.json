@@ -19,8 +19,8 @@
             "flex_align": "align--bottom-center",
             "bg_color": "",
             "color": "#000000",
-            "first_button_text": "d",
-            "first_button_link": "shopify:\/\/pages\/inquire",
+            "first_button_text": "",
+            "first_button_link": "",
             "first_button_type": "btn--white",
             "first_button_size": "btn--large",
             "first_button_style": "btn--solid",
@@ -45,53 +45,6 @@
         "show_arrows": false,
         "autoplay": false,
         "autoplay_speed": 8
-      }
-    },
-    "a1ca414e-1940-43bb-a15d-654f4d3d4697": {
-      "type": "section-hero",
-      "blocks": {
-        "template--19761450549549__a1ca414e-1940-43bb-a15d-654f4d3d4697-16883182916d405473-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Image banner",
-            "heading_size": 11
-          }
-        },
-        "template--19761450549549__a1ca414e-1940-43bb-a15d-654f4d3d4697-16883182916d405473-1": {
-          "type": "text",
-          "settings": {
-            "description": "Tell your brand's story through images.",
-            "text_size": 5,
-            "text_style": "font-body"
-          }
-        },
-        "template--19761450549549__a1ca414e-1940-43bb-a15d-654f4d3d4697-16883182916d405473-2": {
-          "type": "button",
-          "settings": {
-            "link_text": "View products",
-            "link": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "template--19761450549549__a1ca414e-1940-43bb-a15d-654f4d3d4697-16883182916d405473-0",
-        "template--19761450549549__a1ca414e-1940-43bb-a15d-654f4d3d4697-16883182916d405473-1",
-        "template--19761450549549__a1ca414e-1940-43bb-a15d-654f4d3d4697-16883182916d405473-2"
-      ],
-      "settings": {
-        "height": "screen-height-three-quarters",
-        "width": "wrapper--full-padded",
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "overlay_opacity": 0,
-        "overlay_color": "#000000",
-        "show_overlay_text": false,
-        "flex_align": "align--bottom-center",
-        "bg_color": "",
-        "color": "#ffffff"
       }
     },
     "multi-paragraph": {
@@ -277,7 +230,6 @@
   },
   "order": [
     "slideshow",
-    "a1ca414e-1940-43bb-a15d-654f4d3d4697",
     "multi-paragraph",
     "screen-image",
     "complex-triple-image",

@@ -116,7 +116,28 @@
             {%- endif -%}
 
             {%- if block.settings.title != blank or block.settings.description != blank or first_button_text != blank -%}
-              <div class="hero__content__wrapper frame__item {{ block.settings.flex_align }}{% if show_header_backdrop %} backdrop--linear{% endif %}" style="margin-top: {{ margin_top }}px; margin-bottom: {{ margin_bottom }}px"
+            {% style %}
+              #hero__title--{{ block.id }} {
+                 font-size: {{ block.settings.heading_size }}em;
+               }
+
+              #hero__content__wrapper--{{ block.id }} {
+                margin-top: {{ margin_top | plus: 40 }}px;
+                margin-bottom: {{ margin_bottom | plus: 40 }}px;
+              }
+ 
+               @media only screen and (max-width: 500px) {
+               
+               #hero__title--{{ block.id }} {
+                 font-size: {{ block.settings.heading_size | minus: 3 }}em;
+               }
+
+               #hero__content__wrapper--{{ block.id }} {
+                 margin-top: {{ margin_top | plus: 40 | times: 1.5 }}px;
+               }
+             }
+           {% endstyle %}
+              <div class="hero__content__wrapper frame__item {{ block.settings.flex_align }}{% if show_header_backdrop %} backdrop--linear{% endif %}" id="hero__content__wrapper--{{ block.id }}"
                 {% if show_header_backdrop %}
                   style="--header-overlay-color: {{ overlay_color }}; --header-overlay-opacity: {{ overlay_opacity }};"
                 {% endif %}
@@ -126,18 +147,6 @@
                 <div class="hero__content{% if hero_transparent %} hero__content--transparent{% if show_overlay_text %} backdrop--radial{% endif %}{% endif %}"{% if show_header_backdrop %} style="--bg: {{ overlay_color }}; --overlay-opacity: {{ overlay_opacity }};" {% endif %}>
                   {%- unless block.settings.title == '' -%}
                     {%- assign font_size_class = block.settings.heading_size | prepend: 'heading-size-' -%}
-                    {% style %}
-                       #hero__title--{{ block.id }} {
-                          font-size: {{ block.settings.heading_size }}em;
-                        }
-          
-                        @media only screen and (max-width: 500px) {
-                        
-                        #hero__title--{{ block.id }} {
-                          font-size: {{ block.settings.heading_size | minus: 3 }}em;
-                        }
-                      }
-                    {% endstyle %}
                     <h2 class="hero__title" id="hero__title--{{ block.id }}"
                       data-aos="hero"
                       data-aos-anchor="{{ animation_anchor }}"
@@ -432,7 +441,7 @@
           "id":    "text_size",
           "label": "Text size",
           "min": 1,
-          "max": 15,
+          "max": 10,
           "step": 1,
           "default":5
         },
