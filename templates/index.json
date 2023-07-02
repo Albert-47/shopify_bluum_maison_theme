@@ -252,6 +252,15 @@
         "padding_bottom": 50
       }
     },
+    "complex-triple-image": {
+      "type": "section-complex-triple-image",
+      "settings": {
+        "image_1": "shopify:\/\/shop_images\/Instagram_story_-_6_1.jpg",
+        "image_2": "shopify:\/\/shop_images\/Instagram_story_-_4.jpg",
+        "image_3": "shopify:\/\/shop_images\/Instagram_story_-_5.jpg",
+        "bg_color": "#d5e4ef"
+      }
+    },
     "ffd97c60-9a55-479a-9570-3f1205b56ab5": {
       "type": "section-custom-content",
       "blocks": {
@@ -392,6 +401,7 @@
     "image-with-text",
     "hero",
     "logos",
+    "complex-triple-image",
     "ffd97c60-9a55-479a-9570-3f1205b56ab5",
     "triple-image",
     "d7c6dab7-cc25-456b-b8fb-e8c4bc9214d0"
