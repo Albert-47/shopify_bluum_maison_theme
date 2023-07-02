@@ -31,16 +31,19 @@
     grid-template-columns: repeat({{ images_number }}, calc(85% / {{ images_number }}));
   }
 
+  .triple-image {
+    display: block;
+    width: 84%;
+  }
+
   .triple-image--left {
     padding-top: 2rem;
     align-self: end;
-    margin-bottom: -4px;
   }
 
   .triple-image--center {
     align-self: center;
     height: 100%;
-    margin-bottom: -2px;
   }
 
   .triple-image--right {
@@ -57,19 +60,13 @@
 <section id="TIMG--{{ section.id }}">
     <div class="triple-image-wrapper">
         {% if section.settings.image_1 != blank %}
-            <div class="triple-image triple-image--left">
-                <img src="{{ section.settings.image_1 | img_url: '447x900' }}" alt="Image" loading="lazy">
-            </div>
+            <img src="{{ section.settings.image_1 | img_url: '447x900' }}" class="triple-image triple-image--left" alt="Image" loading="lazy">
         {% endif %}
         {% if section.settings.image_3 != blank %}
-            <div class="triple-image triple-image--center">
-                <img src="{{ section.settings.image_3 | img_url: '497x1000' }}" class="triple-perse-center" alt="Image" loading="lazy">
-            </div>
+            <img src="{{ section.settings.image_3 | img_url: '497x1000' }}" class="triple-perse-center triple-image triple-image--center" alt="Image" loading="lazy">
         {% endif %}
         {% if section.settings.image_2 != blank %}
-            <div class="triple-image triple-image--right">
-                <img src="{{ section.settings.image_2 | img_url: '447x900' }}" alt="Image" loading="lazy">
-            </div>
+            <img src="{{ section.settings.image_2 | img_url: '447x900' }}" class="triple-image triple-image--right" alt="Image" loading="lazy">
         {% endif %}
     </div>
 </section>
