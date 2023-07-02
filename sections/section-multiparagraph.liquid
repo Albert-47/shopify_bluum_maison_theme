@@ -19,10 +19,37 @@
         text-align: center;
         margin: 0;
     }
+
+    .mparagraphs-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 12.5rem;
+        width: 80%;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    @media only screen and ( min-width: 800px) {
+
+        .mparagraphs-wrapper {
+            gap: 12.5rem;
+            flex-wrap: nowrap;
+        }
+
+        .bigger-paragraph-wrapper {
+            width: 40%;
+        }
+
+        .smaller-paragraph-wrapper {
+            max-width: 15%;
+        }
+    }
 {% endstyle %}
 
 <section id="MP--{{ section.id }}">
-    <h2>{{ section.settings.title  }}</h2>
+    <h2 style="margin: 0 auto 3.94rem auto; width: 39%">{{ section.settings.title  }}</h2>
 
     {% if section.blocks.size > 0 %}
         <div class="mparagraphs-wrapper">
@@ -44,13 +71,13 @@
                     {% case block.type %}
                         {% when 'bigger_paragraph' %}
                             <div class="bigger-paragraph-wrapper">
-                            <h4>{{ block.settings.heading }}</h4>  
+                            <p style="text-transform: uppercase; color: rgba(152, 152, 152, 1); ">{{ block.settings.heading }}</p>  
                                 {{ block.settings.paragraph }}
                             </div>
 
                         {% when 'smaller_paragraph' %}
                             <div class="smaller-paragraph-wrapper">
-                            <h4>{{ block.settings.heading }}</h4>  
+                            <p style="text-transform: uppercase; ">{{ block.settings.heading }}</p>  
                                 {{ block.settings.paragraph }}
                             </div>
                     {% endcase %}
