@@ -1,0 +1,32 @@
+<section>
+    <h2>Screen section</h2>
+</section>
+
+{% schema %}
+    {
+        "name": "Screen Image",
+        "settings": [
+            {
+                "type": "image_picker",
+                "label": "Image",
+                "id": "image"
+            },
+            {
+                "type": "color",
+                "label": "Frame color",
+                "id": "frame_color"
+            },
+            {
+                "type": "color",
+                "label": "Background",
+                "id": "background_color"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Screen Image",
+                "category": "Image"
+            }
+        ]
+    }
+{% endschema %}

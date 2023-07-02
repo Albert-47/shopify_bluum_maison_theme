@@ -88,169 +88,10 @@
         "padding_bottom": 100
       }
     },
-    "image-with-text": {
-      "type": "section-custom-content",
-      "blocks": {
-        "image": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/dew-gif.jpg",
-            "overlay_opacity": 0,
-            "overlay_color": "#000000",
-            "show_overlay_text": false,
-            "over_title": "",
-            "title": "",
-            "heading_size": 7,
-            "description": "",
-            "text_size": 3,
-            "flex_align": "align--middle-left",
-            "bg_color": "",
-            "color": "#ffffff",
-            "link_text": "",
-            "link": "shopify:\/\/collections\/all",
-            "button_type": "btn--white",
-            "button_size": "",
-            "button_style": "btn--outline",
-            "show_arrow": false
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "subheading": "",
-            "subheading_size": 3,
-            "title": "We'll help you find your arc.",
-            "heading_size": 8,
-            "text": "<ul><li>BRAND IDENTITY DESIGN<\/li><li>PACKAGING DESIGN<\/li><li>SHOPIFY THEME DEVELOPMENT<\/li><li>ECOMMERCE STRATEGY<\/li><li>KLAVIYO MARKETING<\/li><\/ul>",
-            "text_size": 3,
-            "button_text": "Explore our offerings",
-            "button_url": "shopify:\/\/pages\/services",
-            "button_type": "btn--black",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": true,
-            "show_social_links": false,
-            "text_columns": 1,
-            "align_text": "text-left",
-            "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
-            "color": ""
-          }
-        }
-      },
-      "block_order": [
-        "image",
-        "text"
-      ],
+    "screen-image": {
+      "type": "section-screen-image",
       "settings": {
-        "height": "screen-height-one-half",
-        "mobile_height": "screen-height-one-half--mobile",
-        "width": "wrapper--full",
-        "borders": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "hero": {
-      "type": "section-hero",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Broadcast theme",
-            "heading_size": 9
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "description": "Modern commerce built for speed",
-            "text_size": 5,
-            "text_style": "font-body"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "link_text": "View products",
-            "link": "shopify:\/\/collections\/all",
-            "button_type": "btn--white",
-            "button_size": "",
-            "button_style": "btn--outline",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "height": "screen-height-three-quarters",
-        "width": "wrapper--full",
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "overlay_opacity": 0,
-        "overlay_color": "#000000",
-        "show_overlay_text": false,
-        "flex_align": "align--middle-left",
-        "bg_color": "",
-        "color": "#ffffff"
-      }
-    },
-    "logos": {
-      "type": "section-press-logos",
-      "blocks": {
-        "logos-0": {
-          "type": "logo-item",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
-            "heading_size": 6
-          }
-        },
-        "logos-1": {
-          "type": "logo-item",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
-            "heading_size": 6
-          }
-        },
-        "logos-2": {
-          "type": "logo-item",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
-            "heading_size": 6
-          }
-        },
-        "31810ea7-cbb3-419c-9902-bd1648a5d896": {
-          "type": "logo-item",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
-            "heading_size": 6
-          }
-        }
-      },
-      "block_order": [
-        "logos-0",
-        "logos-1",
-        "logos-2",
-        "31810ea7-cbb3-419c-9902-bd1648a5d896"
-      ],
-      "settings": {
-        "title": "Press",
-        "enable_heading_slider": true,
-        "logo_opacity": 60,
-        "bg_color": "#ffffff",
-        "color": "",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "frame_color": ""
       }
     },
     "complex-triple-image": {
@@ -401,9 +242,7 @@
   "order": [
     "slideshow",
     "docs",
-    "image-with-text",
-    "hero",
-    "logos",
+    "screen-image",
     "complex-triple-image",
     "ffd97c60-9a55-479a-9570-3f1205b56ab5",
     "triple-image",
