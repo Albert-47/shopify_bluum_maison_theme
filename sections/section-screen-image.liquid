@@ -1,5 +1,45 @@
-<section>
-    <h2>Screen section</h2>
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign frame_color = section.settings.frame_color
+ 
+-%}
+
+{% style %}
+    #Screen--{{ section.id }} {
+
+        {%- unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank -%}
+        background-color: {{ bg_color }};
+        {%- endunless -%}
+
+        padding: 4rem 0;
+    }
+
+    #sframe--{{ section.id }} {
+        {%- unless frame_color == 'rgba(0,0,0,0)' or frame_color == blank -%}
+            background-color: {{ frame_color }};
+        {%- endunless -%}
+
+    }
+
+    .sframe {
+        width: 66.953rem;
+        height: 39.80388rem;
+        margin: auto;
+        border-radius: 2.22994rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .screen_image {
+        width: 95%;
+    }
+{% endstyle %}
+
+<section id="Screen--{{ section.id }}">
+    <div id="sframe--{{ section.id }}" class="sframe">
+        <img src="{{ section.settings.image | img_url: '1024x1024' }}" alt="Screen Image" class="screen_image">
+    </div>
 </section>
 
 {% schema %}
@@ -14,7 +54,8 @@
             {
                 "type": "color",
                 "label": "Frame color",
-                "id": "frame_color"
+                "id": "frame_color",
+                "default": "#000000"
             },
             {
                 "type": "color",

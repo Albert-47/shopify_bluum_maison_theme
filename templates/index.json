@@ -91,7 +91,9 @@
     "screen-image": {
       "type": "section-screen-image",
       "settings": {
-        "frame_color": ""
+        "image": "shopify:\/\/shop_images\/Frame_1367.jpg",
+        "frame_color": "#212121",
+        "background_color": "#ffffff"
       }
     },
     "complex-triple-image": {
