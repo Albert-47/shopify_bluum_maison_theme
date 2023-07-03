@@ -6959,7 +6959,7 @@ h6, .article__author-bio h3, .blog-section .article__image .article__tags, .h6 {
 
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6, .article__author-bio h3, .blog-section .article__image .article__tags {
-  font-family: var(--FONT-STACK-HEADING);
+  font-family: 'Self Modern';
   font-style: var(--FONT-STYLE-HEADING);
   font-weight: var(--FONT-WEIGHT-HEADING);
   line-height: 1.2;
