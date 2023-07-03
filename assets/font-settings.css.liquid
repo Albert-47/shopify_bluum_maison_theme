@@ -40,6 +40,14 @@
 {{ base_font | font_face: font_display: 'swap' }}
 {{ btn_font | font_face: font_display: 'swap' }}
 
+@fontface {
+  font-family: 'Self Modern';
+  src: url("./self-modern_regular.otf") format("otf")
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 {% if heading_font_bold %}
   {{ heading_font_bold | font_face: font_display: 'swap' }}
 {% endif %}

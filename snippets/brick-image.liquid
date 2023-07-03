@@ -11,6 +11,7 @@
 
 {%- liquid
   assign title = block.settings.title
+  assign over_title = block.settings.over_title
   assign description = block.settings.description
   assign link_text = block.settings.link_text
   assign bg_color = block.settings.bg_color
@@ -55,9 +56,16 @@
 
 <div class="brick__block frame__item {{ text_color_class }}"{% if style != blank %} style="{{ style }}"{% endif %} {{ block.shopify_attributes }}>
   <div class="brick__block__image frame wide-image">
-    {%- if title != '' or description != '' or link_text != '' -%}
+    {%- if title != '' or over_title != '' or description != '' or link_text != '' -%}
       <div class="hero__content__wrapper frame__item {{ block.settings.flex_align }}{% if show_header_backdrop %} backdrop--linear{% endif %}"{% if show_header_backdrop %} style="--header-overlay-color: {{ overlay_color }}; --header-overlay-opacity: {{ overlay_opacity }};"{% endif %}>
         <div class="hero__content{% if hero_transparent %} hero__content--transparent{% endif %}{% if show_overlay_text %} backdrop--radial{% endif %}" {% if show_header_backdrop %} style="--bg: {{ overlay_color }}; --overlay-opacity: {{ overlay_opacity }};"{% endif %}>
+          {%- unless over_title == '' -%}
+            {%- assign animation_order = animation_order | plus: 1 -%}
+            <p style="font-size: 1.5rem;"
+              data-aos-anchor="{{ animation_anchor }}"
+              data-aos-order="{{ animation_order }}">{{ over_title | escape }}</p>
+          {%- endunless -%}
+
           {%- unless title == '' -%}
             {%- assign font_size_class = block.settings.heading_size | prepend: 'heading-size-' -%}
             {%- assign animation_order = animation_order | plus: 1 -%}

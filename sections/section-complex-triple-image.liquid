@@ -1,0 +1,109 @@
+
+{%- liquid
+  assign bg_color = section.settings.bg_color
+  assign images_number = 0
+  if section.settings.image_1 != blank
+    assign images_number = images_number | plus: 1
+  endif
+  if section.settings.image_2 != blank
+    assign images_number = images_number | plus: 1
+  endif
+  if section.settings.image_3 != blank
+    assign images_number = images_number | plus: 1
+  endif
+-%}
+
+{%- style -%}
+  #CIMG--{{ section.id }} {
+
+    {%- unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank -%}
+      background-color: {{ bg_color }};
+    {%- endunless -%}
+  }
+
+  .complex-image-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-top: 4rem;
+  }
+
+  .most-complex-wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+ 
+ .complex-image--left, .complex-image--right {
+    display: block;
+    max-height: 40rem;
+  }
+
+  .complex-image {
+    max-width: 37%
+  }
+
+{%- endstyle -%}
+
+<section id="CIMG--{{ section.id }}" style="position: relative;">
+    <div class="complex-image-wrapper">
+        {% if section.settings.image_1 != blank %}
+            <img src="{{ section.settings.image_1 | img_url: '1024x1024' }}" class="complex-image--left complex-image" alt="Image" loading="lazy">
+        {% endif %}
+        
+        {% if section.settings.image_2 != blank %}
+            <img src="{{ section.settings.image_2 | img_url: '1024x1024' }}" class="complex-image--right complex-image" alt="Image" loading="lazy">
+        {% endif %}
+    </div>
+
+    <div class="most-complex-wrapper">
+        {% if section.settings.image_3 != blank %}
+            <img src="{{ section.settings.image_3 | img_url: '1024x1024' }}" class="complex-perse-center complex-image" alt="Image" loading="lazy">
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+    {
+      "name": "Complex Triple Image",
+      "settings": [
+          {
+            "type": "header",
+            "content": "Images"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Left Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Right Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "Center Image"
+          },
+          {
+            "type": "header",
+            "content": "Colors"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background"
+          }
+      ],
+      "presets": [
+        {
+            "name": "Triple image",
+            "category": "Image"
+        }
+     ]
+    }
+{% endschema %}

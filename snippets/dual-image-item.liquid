@@ -1,0 +1,36 @@
+{% liquid
+
+    capture wrapper_classes
+
+        if desktop_height != blank
+        echo ' ' | append: desktop_height
+        endif
+
+        if mobile_height != blank
+        echo ' ' | append: mobile_height
+        endif
+
+        if modifier != blank
+        echo ' ' | append: modifier
+        endif
+    endcapture
+    
+%}
+
+{%- capture aos_animation -%}
+    {%- if animation_delay -%}
+      data-aos="img-in"
+      data-aos-delay="{{ animation_delay | times: 150 }}"
+      data-aos-duration="800"
+      data-aos-easing="ease-out-quart"
+    {%- endif -%}
+  {%- endcapture -%}
+
+    {%- if image contains 'blank.svg' or image == blank -%}
+    <img src="{{ 'blank.svg' | asset_url }}" loading="lazy" class="is-loading dual-image-perse">
+    {%- else -%}
+    {{ image | image_url: width: width | image_tag:
+        loading: 'lazy',
+        class: 'is-loading dual-image-perse'
+    }}
+    {%- endif -%}
