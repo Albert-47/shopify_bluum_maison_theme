@@ -26,7 +26,6 @@
     {%- endif -%}
   {%- endcapture -%}
 
-<div class=" {{ wrapper_classes }} dual-image-wrapper is-loading {{ special_class }}" {{ aos_animation }}>
     {%- if image contains 'blank.svg' or image == blank -%}
     <img src="{{ 'blank.svg' | asset_url }}" loading="lazy" class="is-loading dual-image-perse">
     {%- else -%}
@@ -35,4 +34,3 @@
         class: 'is-loading dual-image-perse'
     }}
     {%- endif -%}
-</div>
